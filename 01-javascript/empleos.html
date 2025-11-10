@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Encuentra las mejores ofertas de trabajo para desarrolladores en DevJobs.">
-    <link rel="stylesheet" href="../00-html-css/styles.css">
-
-    <script type="module" src="./script.js"></script>
+    
+    <link rel="stylesheet" href="./styles.css">
+    <!-- de debe colocar el type module para poder tener un main e importar archivos js-->
+    <script type="module" src="./main.js"></script>
 
     <title>Empleos</title>
 </head>
@@ -26,7 +27,8 @@
 
         <div>
             <a href="">Subir CV</a>
-            <img src="../00-html-css/yoperfil.png" alt="Imagen de usuarios">
+            <!--Nuestro componente-->
+            <devjobs-avatar service="github" username="Josetruko" size="50"></devjobs-avatar>
         </div>
     </header>
 
@@ -47,8 +49,8 @@
 
                     <input required id="empleos-search-input" type="text"
                         placeholder="Busca trabajos, empresas o habildiades">
-                </div>
 
+                </div>
 
                 <div class="search-filters">
                     <select name="technology" id="filter-technology">
@@ -86,9 +88,11 @@
                         <option value="lead">Lead</option>
                     </select>
                 </div>
+               
             </form>
 
             <h3 id="filter-selected-value"></h3>
+            <h3 id="input-selected-value"></h3>
 
         </section>
 
